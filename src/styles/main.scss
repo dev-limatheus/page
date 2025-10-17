@@ -1,0 +1,43 @@
+@use './colors.scss';
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    background-color: colors.$backgroundColor;
+}
+
+.container{
+    margin-top: 50px;
+    max-width: 600px;
+    width: 100%;
+    height: 700px;
+    margin: 0 auto;
+    background-color: colors.$principalColor;
+    border-radius: 32px;
+
+    .profile{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .profile-img{
+            width: 90px;
+            border-radius: 50%;
+            margin-top: 50px;
+        }
+
+        .profile-name{
+            color: colors.$fontColor;
+        }
+
+        .profile-desc{
+            display: block;
+            max-width: 340px;
+            font-size: 16px;
+            color: colors.$fontColor;
+            opacity: .7;
+        }
+    }
+}
