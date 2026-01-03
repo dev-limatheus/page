@@ -1,4 +1,5 @@
 @use './colors.scss';
+@use './fonts.scss';
 
 *{
     box-sizing: border-box;
@@ -6,6 +7,44 @@
 
 body{
     background-color: colors.$backgroundColor;
+}
+
+.header{
+    padding: 16px;
+    background-color: colors.$headerColor;
+    margin-bottom: 16px;
+    font-family: fonts.$principalFont;
+
+    &__nav{
+
+        &__lista{
+            display: flex;
+            list-style: none;
+            justify-content: center;
+            border-right: 16px;
+
+            &__item{
+                color: #fff;
+                margin-right: 16px;
+                font-size: 24px;
+
+                &__link{
+                    display: inline-block;
+                    text-decoration: none;
+                    color: #fff;
+                    transition: transform 0,4s ease-in-out;
+
+                    &:hover{
+                        transform: scale(1.3);
+                        color: red;
+                    }
+                }
+
+                
+            }
+        }
+
+    }
 }
 
 .container{
